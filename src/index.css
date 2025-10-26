@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- Utilities / small helpers ---- */
+.highlight-white {
+  /* keep nice soft shadow and subtle top border */
+  @apply shadow-lg border-t border-white border-opacity-10;
+}
+
+.background {
+  /* full-screen dark gradient background */
+  @apply w-full min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900;
+}
+
+/* Form field - uses safe Tailwind utilities */
+.form-field {
+  @apply block w-full text-sm rounded-md border-0 bg-slate-800 placeholder:text-gray-400 shadow-md ring-1 ring-inset ring-slate-700 focus:ring-inset focus:ring-indigo-500 sm:leading-6;
+}
+
+/* Form label */
+.form-label {
+  @apply block text-sm font-medium text-gray-300 leading-6;
+}
+
+/* Table cell padding helper */
+.table-data {
+  @apply px-3 md:px-6 py-1 md:py-2;
+}
+
+/* Submit button */
+.form-submit {
+  @apply w-full py-2 text-center font-semibold rounded-md bg-indigo-600 hover:bg-indigo-500 shadow-md transition-all text-white;
+}
+
+/* Define scrollbar styles (WebKit) */
+::-webkit-scrollbar {
+  width: 6px; /* slightly wider for usability */
+}
+
+::-webkit-scrollbar-track {
+  background: #0f1724; /* dark track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155; /* handle color */
+  border-radius: 6px;
+}
+
+/* Optional: show a hover color */
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
